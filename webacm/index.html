@@ -1,0 +1,251 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap 101 Template</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <style type="text/css">
+            body {
+                font-family: Helvetica, sans-serif;
+            }
+
+            /* h2, h3 { margin-top:0; } */
+            form {
+                margin-top: 15px;
+            }
+
+            form>input {
+                margin-right: 15px;
+            }
+
+            /* #results { float:right; margin:20px; padding:20px; border:1px solid; background:#ccc; } */
+        </style>
+    </head>
+
+    <body>
+        <!-- Static navbar -->
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../navbar/">Default</a></li>
+                        <li class="active"><a href="./">Static top</a></li>
+                        <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <!-- table -->
+        <div class="container">
+            <h1>Hello, world!</h1>
+
+            <div class="form form-inline" style="margin-bottom: 2%; ">
+                <label for="exampleInputEmail1">ID NUMBER</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter ID">
+                <button type="submit" class="btn btn-default">Search</button>
+            </div>
+
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Photo</th>
+                </tr>
+                <tr>
+                    <td>2017-27-050</td>
+                    <td>Dylan Balagtas</td>
+                    <td>
+                        <!-- Standard button -->
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-sm" data-toggle="modal" data-target="#myModal">
+                            <span class="glyphicon glyphicon-camera"></span>
+                        </button>
+                        <button class="btn btn-sm" data-toggle="modal">
+                            <span class="glyphicon glyphicon-repeat"></span>
+                        </button>
+                        <button class="btn btn-sm" data-toggle="modal">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2017-27-078</td>
+                    <td>Mark Rian Rosell</td>
+                    <td>
+                        <!-- Standard button -->
+                        <button class="btn btn-sm" data-toggle="modal" data-target="#myModal">
+                            <span class="glyphicon glyphicon-camera"></span>
+                        </button>
+                        <button class="btn btn-sm" data-toggle="modal">
+                            <span class="glyphicon glyphicon-repeat"></span>
+                        </button>
+                        <button class="btn btn-sm" data-toggle="modal">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2017-27-003</td>
+                    <td>Bailon Ceniza</td>
+                    <td>
+                        <!-- Standard button -->
+                        <button class="btn btn-sm" data-toggle="modal" data-target="#myModal">
+                            <span class="glyphicon glyphicon-camera"></span>
+                        </button>
+                        <button class="btn btn-sm" data-toggle="modal">
+                            <span class="glyphicon glyphicon-repeat"></span>
+                        </button>
+                        <button class="btn btn-sm" data-toggle="modal">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- close and title -->
+                        <button type="button" class="close" data-dismiss="modal"><span
+                                aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+                        <!-- FORM -->
+
+
+
+                        <div id="my_camera" class="container" style="
+                                margin-top: 2%;
+                                position:absolute;
+                                ">
+                        </div>
+                        <div style="
+                                position:relative; 
+                                background-color: rgba(0, 0, 0, 0.5); 
+                                width:320px; 
+                                height:240px;
+                                top: 12px;
+                                left: 15px;
+                                -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 0, 75% 0, 75% 100%, 25% 100%, 25% 100%, 100% 100%, 100% 0%);
+                                clip-path: polygon(0% 0%, 0% 100%, 12% 100%, 12% 0, 88% 0, 88% 100%, 1% 100%, 0 100%, 100% 100%, 100% 0%);
+                                ">
+                        </div>
+                     
+
+
+                        <!-- First, include the Webcam.js JavaScript Library -->
+                        <script type="text/javascript" src="js/webcam.min.js"></script>
+
+                        <!-- Configure a few settings and attach camera -->
+                        <script language="JavaScript">
+                            Webcam.set({
+                                width: 320,
+                                height: 240,
+                                image_format: 'jpeg',
+                                jpeg_quality: 90
+                            });
+                            Webcam.attach('#my_camera');
+                        </script>
+
+                        <!-- A button for taking snaps -->
+                        <form>
+                            <div id="pre_take_buttons">
+                                <input type=button value="Take Snapshot" onClick="preview_snapshot()">
+                            </div>
+                            <div id="post_take_buttons" style="display:none">
+                                <input type=button value="&lt; Take Another" onClick="cancel_preview()">
+                                <input type=button value="Save Photo &gt;" onClick="save_photo()"
+                                    style="font-weight:bold;">
+                            </div>
+                        </form>
+
+                        <!-- Code to handle taking the snapshot and displaying it locally -->
+                        <script language="JavaScript">
+                            function preview_snapshot() {
+                                // freeze camera so user can preview pic
+                                Webcam.freeze();
+
+                                // swap button sets
+                                document.getElementById('pre_take_buttons').style.display = 'none';
+                                document.getElementById('post_take_buttons').style.display = '';
+                            }
+
+                            function cancel_preview() {
+                                // cancel preview freeze and return to live camera feed
+                                Webcam.unfreeze();
+
+                                // swap buttons back
+                                document.getElementById('pre_take_buttons').style.display = '';
+                                document.getElementById('post_take_buttons').style.display = 'none';
+                            }
+
+                            function save_photo() {
+                                // actually snap photo (from preview freeze) and display it
+                                Webcam.snap(function (data_uri) {
+                                    // display results in page
+                                    document.getElementById('results').innerHTML =
+                                        '<h2>Here is your image:</h2>' +
+                                        '<img src="' + data_uri + '"/>';
+
+                                    // swap buttons back
+                                    document.getElementById('pre_take_buttons').style.display = '';
+                                    document.getElementById('post_take_buttons').style.display = 'none';
+                                });
+                            }
+                        </script>
+
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+
+    </html>
