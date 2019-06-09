@@ -75,9 +75,10 @@
             <h1>Hello, world!</h1>
 
             <div class="form form-inline" style="margin-bottom: 2%; ">
-                <label for="exampleInputEmail1">ID NUMBER</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter ID">
-                <button type="submit" class="btn btn-default">Search</button>
+                <label for="idNumber">ID NUMBER</label>
+                <input type="text" class="form-control" id="idNumber" placeholder="Enter ID">
+                <button type="button" class="btn btn-default" onclick="validate()">Search</button>
+                <p id="demo"></p>
             </div>
 
             <table class="table">
@@ -242,6 +243,7 @@
             </div>
         </div>
 
+        <script src="js/IDVertification.js"></script>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
