@@ -138,8 +138,6 @@
             </table>
         </div>
 
-        <!-- Modal -->
-
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -173,7 +171,6 @@
                         </div>
                      
 
-
                         <!-- First, include the Webcam.js JavaScript Library -->
                         <script type="text/javascript" src="js/webcam.min.js"></script>
 
@@ -191,12 +188,12 @@
                         <!-- A button for taking snaps -->
                         <form>
                             <div id="pre_take_buttons">
-                                <input type=button value="Take Snapshot" onClick="preview_snapshot()">
+                                <input type=button value="Take Snapshot" onClick="preview_snapshot()" class="btn btn-default">
                             </div>
                             <div id="post_take_buttons" style="display:none">
-                                <input type=button value="&lt; Take Another" onClick="cancel_preview()">
+                                <input type=button value="&lt; Take Another" onClick="cancel_preview()" class="btn btn-default">
                                 <input type=button value="Save Photo &gt;" onClick="save_photo()"
-                                    style="font-weight:bold;">
+                                    style="font-weight:bold;" class="btn btn-default">
                             </div>
                         </form>
 
@@ -234,10 +231,6 @@
                                 });
                             }
                         </script>
-
-
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
