@@ -1,16 +1,21 @@
+
+
 function validate() {
     var x, text;
-    x = document.getElementById("idNumber").value;
-    console.log(x);
-    // if(x.value == "")
-    // {
-    // 	alert("No blank values allowed");
-    // }else {
-    if (isNaN(x) || x < 1 || x > 10) {
-        text = "Input not valid";
+    idNumber = document.getElementById("idNumber").value;
+    var pattern = /[^a-zA-Z\s]/;
+    var phoneResult = pattern.test(idNumber);
+    // alert(phoneResult);
+//     console.log(x);
+//     console.log(pattern);
+//     console.log(pattern.test());
+//    var result= pattern.toString();
+    // console.log(phoneResult);
+    // console.log(pattern.toString(idNumber));
+    if (phoneResult == false) {
+        alert("invalid input");
     } else {
-        text = "Input OK";
+        alert("valid input");
     }
-    document.getElementById("demo").innerHTML = text;
 }
 // }
