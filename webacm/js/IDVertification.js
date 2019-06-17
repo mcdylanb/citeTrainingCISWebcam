@@ -1,4 +1,4 @@
-
+var vertCover= document.getElementById("vertCover");
 
 function validate() {
     var x, text;
@@ -9,6 +9,7 @@ function validate() {
         alert("invalid input");
     } else {
         alert("valid input");
+        vertCover.style.display="none";
     }
 }
 // }
