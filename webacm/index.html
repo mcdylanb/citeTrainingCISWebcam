@@ -21,7 +21,7 @@
             }
 
             form>input {
-                margin-right: 15px;
+                margin-right: auto;
             }
 
             /* #results { float:right; margin:20px; padding:20px; border:1px solid; background:#ccc; } */
@@ -71,108 +71,84 @@
         </div>
         <!-- end of static navbar -->
 
+        <!-- left panel -->
         <div class="col-md-4">
-
-            <!-- FORM -->
-
-
-
+            <!-- camera -->
             <div id="my_camera" class="container" style="
                             margin-top: 2%;
                             position:absolute;
                             ">
             </div>
+            <!-- end of camera -->
+            <!-- camera guide -->
             <div style="
                             position:relative; 
                             background-color: rgba(0, 0, 0, 0.5); 
                             width:320px; 
                             height:240px;
-                            top: 12px;
+                            top: 9px;
                             left: 15px;
                             -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 0, 75% 0, 75% 100%, 25% 100%, 25% 100%, 100% 100%, 100% 0%);
                             clip-path: polygon(0% 0%, 0% 100%, 12% 100%, 12% 0, 88% 0, 88% 100%, 1% 100%, 0 100%, 100% 100%, 100% 0%);
                             ">
             </div>
+            <!-- end camera guide -->
 
+            <!-- vertification cover -->
+            <div style="
+                            position:relative; 
+                            background-color: rgba(0, 0, 0, 0.9); 
+                            width:320px; 
+                            height:240px;
+                            top: -231px;
+                            left: 15px;
+                            ">
+            </div>
+            <!-- end of vertification cover -->
+
+            <div class="form-horizontal" style="position:relative; top: -450px;" >
+                <label for="idNumber">ID NUMBER</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="idNumber" placeholder="Enter ID">
+                </div>
+                <button type="button" class="btn btn-default" onclick="validate()">Search</button>
+            </div>
 
 
             <!-- First, include the Webcam.js JavaScript Library -->
             <script type="text/javascript" src="js/webcam.min.js"></script>
 
             <!-- Configure a few settings and attach camera -->
-            <script language="JavaScript">
-                Webcam.set({
-                    width: 320,
-                    height: 240,
-                    image_format: 'jpeg',
-                    jpeg_quality: 90
-                });
-                Webcam.attach('#my_camera');
-            </script>
+
+            <script src="js/wc_settings.js"></script>
 
             <!-- A button for taking snaps -->
             <form>
                 <div id="pre_take_buttons">
-                    <input type=button value="Take Snapshot" onClick="preview_snapshot()">
+                    <input type=button value="Take Snapshot" onClick="preview_snapshot()" class="btn btn-default">
                 </div>
                 <div id="post_take_buttons" style="display:none">
-                    <input type=button value="&lt; Take Another" onClick="cancel_preview()">
-                    <input type=button value="Save Photo &gt;" onClick="save_photo()" style="font-weight:bold;">
+                    <input type=button value="&lt; Take Another" onClick="cancel_preview()" class="btn btn-default">
+                    <input type=button value="Save Photo &gt;" onClick="save_photo()" style="font-weight:bold;" class="btn btn-default">
                 </div>
             </form>
 
             <!-- Code to handle taking the snapshot and displaying it locally -->
-            <script language="JavaScript">
-                function preview_snapshot() {
-                    // freeze camera so user can preview pic
-                    Webcam.freeze();
-
-                    // swap button sets
-                    document.getElementById('pre_take_buttons').style.display = 'none';
-                    document.getElementById('post_take_buttons').style.display = '';
-                }
-
-                function cancel_preview() {
-                    // cancel preview freeze and return to live camera feed
-                    Webcam.unfreeze();
-
-                    // swap buttons back
-                    document.getElementById('pre_take_buttons').style.display = '';
-                    document.getElementById('post_take_buttons').style.display = 'none';
-                }
-
-                function save_photo() {
-                    // actually snap photo (from preview freeze) and display it
-                    Webcam.snap(function (data_uri) {
-                        // display results in page
-                        document.getElementById('results').innerHTML =
-                            '<h2>Here is your image:</h2>' +
-                            '<img src="' + data_uri + '"/>';
-
-                        // swap buttons back
-                        document.getElementById('pre_take_buttons').style.display = '';
-                        document.getElementById('post_take_buttons').style.display = 'none';
-                    });
-                }
-            </script>
-
-
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <script src="js/wc_snapshot.js"></script>
+            
 
             <!--end of modal -->
         </div>
+        <!-- end of left panel -->
 
+        <!-- right panel -->
         <div class="col-md-8">
             <!-- table -->
             <div >
-                <h1>Hello, world!</h1>
-
                 <div class="form form-inline" style="margin-bottom: 2%; ">
                     <label for="idNumber">ID NUMBER</label>
                     <input type="text" class="form-control" id="idNumber" placeholder="Enter ID">
                     <button type="button" class="btn btn-default" onclick="validate()">Search</button>
-                    <p id="demo"></p>
                 </div>
 
                 <table class="table">
@@ -224,6 +200,7 @@
             </div>
             <!-- end of table -->
         </div>
+        <!-- end of right panel -->
 
 
 
