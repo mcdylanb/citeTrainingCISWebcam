@@ -72,45 +72,39 @@
     <!-- end of static navbar -->
 
     <!-- left panel -->
-    <div class="col-md-5">
+    <div class="col-md-5" style="margin-left:auto;">
         <!-- camera -->
-        <div style="display:flex; position:absolute; margin:auto; flex-direction: column;">
-
-            <div>
-                <div id="my_camera" class="container" style="
-                position:absolute;
-                            z-index:0;
-                            padding: 0;
-                            ">
+        <div style="display: flex; flex-direction: column; ">
+            <div style="position: relative; width:320px; height:240px;">
+                <div id="my_camera" class="container" style="position: absolute; padding: 0;" >
                 </div>
-                <!-- end of camera -->
-                <!-- camera guide -->
-                <div style="
-                            background-color: rgba(0, 0, 0, 0.5); 
+                    <div style="
+                        background-color: rgba(0, 0, 0, 0.5); 
+                        width:320px; 
+                        height:240px;
+                        -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 0, 75% 0, 75% 100%, 25% 100%, 25% 100%, 100% 100%, 100% 0%);
+                        clip-path: polygon(0% 0%, 0% 100%, 12% 100%, 12% 0, 88% 0, 88% 100%, 1% 100%, 0 100%, 100% 100%, 100% 0%);
+                        position: absolute;
+                        z-index: 1;
+                        ">
+                    </div>
+                    <!-- end camera guide -->
+
+                    <div id="vertCover" style="
+                            background-color: rgba(0, 0, 0, 0.9); 
                             width:320px; 
                             height:240px;
-                            -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 0, 75% 0, 75% 100%, 25% 100%, 25% 100%, 100% 100%, 100% 0%);
-                            clip-path: polygon(0% 0%, 0% 100%, 12% 100%, 12% 0, 88% 0, 88% 100%, 1% 100%, 0 100%, 100% 100%, 100% 0%);
-                            z-index:1;
+                            position: absolute;
+                            z-index: 2;
                             ">
-                </div>
-                <!-- end camera guide -->
+                    </div>
+                <!-- end of camera -->
+                <!-- camera guide -->
 
-                <div id="vertCover" style="
-                                background-color: rgba(0, 0, 0, 0.9); 
-                                width:320px; 
-                                height:240px;
-                                position: absolute;
-    top: 0px;
-    
-                                /* left: 15px; */
-                                z-index:2;
-                                ">
-                </div>
                 <!-- end of vertification cover -->
             </div>
 
-            <div style="z-index: 0;">
+            <div>
 
                 <div class="panel panel-default">
                     <div class="panel-body">
